@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning/my_card.dart';
 
 class RichResetScreen extends StatefulWidget {
   const RichResetScreen({super.key});
@@ -21,7 +22,7 @@ class _RichResetScreenState extends State<RichResetScreen> {
           margin: const EdgeInsets.all(20),
           padding: const EdgeInsets.all(20),
           width: 350,
-          height: 500,
+          height: 600,
           decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(20)),
 
           child: Column(
@@ -61,9 +62,10 @@ class _RichResetScreenState extends State<RichResetScreen> {
                   });
                 },
                 child: const Text("more money", style: TextStyle(fontSize: 18)),
-              ), // Button
+              ),
 
               const SizedBox(height: 5),
+              // Button
               ElevatedButton(
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                 onPressed: () {
@@ -73,6 +75,16 @@ class _RichResetScreenState extends State<RichResetScreen> {
                   });
                 },
                 child: const Text("Be poor", style: TextStyle(fontSize: 18, color: Colors.white)),
+              ),
+              const SizedBox(height: 5),
+              // Button
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
+                onPressed: () {
+                  print("Go to screen my card!");
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => MyCardScreen()));
+                },
+                child: const Text("Go to my Card", style: TextStyle(fontSize: 18, color: Colors.white)),
               ),
             ],
           ),
