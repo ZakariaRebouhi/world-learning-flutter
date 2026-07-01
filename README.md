@@ -1,8 +1,10 @@
 # learning
 
-A new Flutter project.
+
 
 ## Getting Started
+### when download project, type in terminal : flutter pub get
+
 
 This project is a starting point for a Flutter application.
 
